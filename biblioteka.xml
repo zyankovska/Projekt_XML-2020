@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE uczelnia SYSTEM "biblioteka.dtd">
 <biblioteka>
- <dzial nazwa="...">  <!-- nauka, rozrywka, historyczne, gazety/katalogi/журналы --> <!-- В качестве примера сделать 2-3 działa -->
-  <ksiazka nr="...">  
-<!-- postać [A-Z]*[0-9]* || [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9] -->
-   <tytul>...</tytul>
-   <autor>...</autor>
-   <rok>...</rok>
-   <opis>...</opis>
-  </ksiazka>
- </dzial>
+ <ksiazki>
+  <dzial nazwa="...">  <!-- nauka, rozrywka, historyczne, gazety/katalogi/журналы --> <!-- В качестве примера сделать 2-3 działa -->
+   <ksiazka nr="...">  <!-- postać [A-Z]*[0-9]* || [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9] -->
+    <tytul>...</tytul>
+    <autor>...</autor>
+    <rok>...</rok>
+    <opis>...</opis>
+   </ksiazka>
+  </dzial>
+ </ksiazki>
+
+ <pracowniki>
+  <pracownik> <!-- В качестве примера сделать 2-3 pracownika -->
+   <>
+  </pracownik>
+ </pracowniki>
+ 
+ <czytelnicy>
+  <czytelnik> <!-- В качестве примера сделать 2-3 czytelnika -->
+   <>
+  </czytelnik>
+ </czytelnicy>
+
 </biblioteka>
