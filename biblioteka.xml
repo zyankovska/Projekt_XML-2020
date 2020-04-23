@@ -2,8 +2,9 @@
 <!DOCTYPE uczelnia SYSTEM "biblioteka.dtd">
 <biblioteka>
  <ksiazki>
-  <dzial nazwa="...">  <!-- nauka, rozrywka, historyczne, gazety/katalogi/журналы --> <!-- В качестве примера сделать 2-3 działa -->
-   <ksiazka nr="...">  <!-- postać [A-Z]*[0-9]* || [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9] -->
+  <dzial nazwa="...">  <!-- nazwa = nauka, rozrywka, historyczne, inne (gazety/katalogi/журналы) --> <!-- В качестве примера сделать 2-3 działa -->
+   <ksiazka nr="..." typ="..." obkładka ="...">  <!-- nr = [A-Z]*[0-9]* lub [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]; typ = papierowa, e-book --> 
+   <!-- obkładka (nie jest wymagane) = twarda, miekka  lub  obkładka (jest wymagane) = twarda, miekka, none ? --> <!-- В качестве примера сделать 2-3 ksiazki -->
     <tytul>...</tytul>
     <autor>...</autor>
     <rok>...</rok>
@@ -12,16 +13,48 @@
   </dzial>
  </ksiazki>
 
- <pracowniki>
-  <pracownik> <!-- В качестве примера сделать 2-3 pracownika -->
-   <>
+ <pracownicy>
+  <pracownik id="..."> <!-- id = [0-9][0-9][0-9][0-9][0-9] --> <!-- В качестве примера сделать 2-3 pracownika -->
+   <imie>...</imie>
+   <nazwisko>...</nazwisko>
+   <PESEL>...</PESEL>
+   <posada>...</posada> <!-- bibliotekarz, administrator, sprzątarka?, ?  --> <!-- specjalizacja? stanowisko? Проверить как лучше перевести; возможно, уточнить у кого-то..? -->
+   <adres>
+    <miasto>...</miasto>
+    <ulica>...</ulica>
+    <nr_domu>...</nr_domu>
+    <nr_mieszkania>...</nr_mieszkania> <!-- Nie jest wymagane? (W przypadku jeśli osoba ma dom jednorodzinny) -->
+   </adres>
+   <telefon>...</telefon>
   </pracownik>
- </pracowniki>
+ </pracownicy>
  
  <czytelnicy>
-  <czytelnik> <!-- В качестве примера сделать 2-3 czytelnika -->
-   <>
+  <czytelnik id="..." status="..."> <!-- id = [A-Z][0-9][0-9][0-9][0-9][0-9]; --> <!-- В качестве примера сделать 2-3 czytelnika -->
+  <!-- status czytelnika = przyjaciel ksiazek(0-5), traf(6-20), ufaj ale sprawdzaj(21-50), osoba podejrzana(51-90), wróg ksiazek(91-100) -->
+  <!-- status czytelnika zależy od ilości punktów karnych; od statusu zależy prioritet w kolejce rejestracji książek -->
+   <imie>...</imie>
+   <nazwisko>...</nazwisko>
+   <PESEL>...</PESEL> <!-- Nie jest wymagane? -->
+   <adres>
+    <miasto>...</miasto>
+    <ulica>...</ulica>
+    <nr_domu>...</nr_domu>
+    <nr_mieszkania>...</nr_mieszkania> <!-- Nie jest wymagane? (W przypadku jeśli osoba ma dom jednorodzinny) -->
+   </adres>
+   <telefon>...</telefon>
+   <email>...</email>
+   <punkty>...</punkty> <!-- punkty karne za uszkodzenie ksiazki, przeterminowany zwrot lub zgubienie; 100 pkt = mandat -->
   </czytelnik>
  </czytelnicy>
 
+ <rezerwacja>
+  <kolejka id_k="..."> <!-- id_k - id książki, dla której stworzona jest kolejka; kolejka się tworzy w przypadku kiedy wszystkie egzemplarze książki są zajęte -->
+   <miejsce>
+    <id_cz>...</id_cz>
+    <imie>...</imie>
+    <status>...</status> <!-- ref @status -->
+   </miejsce>
+ </rezerwacja>
+ 
 </biblioteka>
