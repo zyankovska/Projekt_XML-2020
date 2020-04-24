@@ -3,7 +3,7 @@
 <biblioteka>
  <ksiazki>
   <dzial nazwa="...">  <!-- nazwa = nauka, rozrywka, historyczne, inne (gazety/katalogi/журналы) --> <!-- В качестве примера сделать 2-3 działa -->
-   <ksiazka nr="..." typ="..." obkladka ="...">  <!-- nr = [A-Z]*[0-9]* lub [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]; typ = papierowa, e-book --> 
+   <ksiazka nr="..." typ="..." obkladka="...">  <!-- nr = [A-Z]*[0-9]* lub [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]; typ = papierowa, e-book --> 
    <!-- obkładka (nie jest wymagane) = twarda, miekka  lub  obkładka (jest wymagane) = twarda, miekka, none ? --> <!-- В качестве примера сделать 2-3 ksiazki -->
     <tytul>...</tytul>
     <autor>...</autor>
@@ -49,7 +49,7 @@
  </czytelnicy>
 
  <rezerwacja>
-  <kolejka id_k="..."> <!-- id_k - id książki, dla której stworzona jest kolejka; kolejka się tworzy w przypadku kiedy wszystkie egzemplarze książki są zajęte -->
+  <kolejka id_k="..."> <!-- id_k - (ref @nr) id książki, dla której stworzona jest kolejka; kolejka się tworzy w przypadku kiedy wszystkie egzemplarze książki są zajęte -->
    <miejsce>
     <id_cz>...</id_cz>
     <imie>...</imie>
