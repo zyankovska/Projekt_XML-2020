@@ -2,14 +2,22 @@
 <!DOCTYPE uczelnia SYSTEM "biblioteka.dtd">
 <biblioteka>
  <ksiazki>
-  <dzial nazwa="...">  <!-- nazwa = nauka, rozrywka, historyczne, inne (gazety/katalogi/журналы) --> <!-- В качестве примера сделать 2-3 działa -->
-   <ksiazka nr="..." typ="..." obkladka="...">  <!-- nr = [A-Z]*[0-9]* lub [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]; typ = papierowa, e-book --> 
-   <!-- obkładka (nie jest wymagane) = twarda, miekka  lub  obkładka (jest wymagane) = twarda, miekka, none ? --> <!-- В качестве примера сделать 2-3 ksiazki -->
-    <tytul>...</tytul>
-    <autor>...</autor>
-    <rok>...</rok>
-    <opis>...</opis>
-   </ksiazka>
+  <dzial nazwa="...">  <!-- nazwa = nauka, rozrywka, historyczne (archiwum), periodyk? (gazety/katalogi/czasopisma) --> <!-- В качестве примера сделать 2-3 działa -->
+   <oddzial nazwa="..."> <!-- nazwa => Nauka: mfi, jez, biochem, human; Rozrywka: pp, po, dziec, mlod, fant, krymsen, thm; Historyczne: hist;
+Periodyk: gaz, kat, czp -->
+    <ksiazka nr="..." typ="..." okladka="...">  <!-- nr = [A-Z]*[0-9]* lub [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]; typ = papierowa, e-book --> 
+    <!-- okładka (nie jest wymagane) = twarda, miekka  lub  okładka (jest wymagane) = twarda, miekka, none ? --> <!-- В качестве примера сделать 2-3 ksiazki -->
+     <tytul>...</tytul>
+     <autor>...</autor> <!-- "Periodyk" nie ma autora, dlatego "autor" nie jest wymagany..? -->
+     <rok>...</rok>
+     <opis>...</opis>
+    </ksiazka>
+   </oddzial>
+   <odd kod="...">...</odd> <!-- kod oddziału który będzie odpowiadać za całą nazwę -->
+   <!-- Mat/Fiz/Inf - mfi; Nauka języków obcych - jez; Biologia/Chemia - biochem; Nauki Humanistyczne - human -->
+   <!-- Literatura piękna Polska - pp; Literatura piękna obca - po; Dla dzieci - dziec; Dla młodzieży - mlod; Sci-fi i fantasy - fant;
+ Kryminał/Sensacja - krymsen; Thriller/Horror/Mistyka - thm; -->
+   <!-- historyczne - hist --> <!-- gazety - gaz; katalogi - kat, czasopisma - czp -->
   </dzial>
  </ksiazki>
 
@@ -18,7 +26,7 @@
    <imie>...</imie>
    <nazwisko>...</nazwisko>
    <PESEL>...</PESEL>
-   <posada>...</posada> <!-- bibliotekarz, administrator, sprzątarka?, ?  --> <!-- specjalizacja? stanowisko? Проверить как лучше перевести; возможно, уточнить у кого-то..? -->
+   <posada>...</posada> <!-- bibliotekarz(2-3 Или для примера хватит одного?), administrator, sprzątarka?, archiwista  --> <!-- specjalizacja? stanowisko? Проверить как лучше перевести; возможно, уточнить у кого-то..? -->
    <adres>
     <miasto>...</miasto>
     <ulica>...</ulica>
