@@ -1,0 +1,22 @@
+<!ELEMENT biblioteka (dzial+, pracownicy, czytelnicy, rezerwacja)>
+
+<!ELEMENT dzial (ksiazki)>
+<!ELEMENT pracownicy ()>
+<!ELEMENT czytelnicy ()>
+<!ELEMENT rezerwacja ()>
+
+<!ELEMENT ksiazki (ksiazka+)>
+
+<!ELEMENT ksiazka (tytul, autor, opis, ...)>
+<!ATTLIST ksiazka nr CDATA #REQUIRED 
+typ (papierowa|e-book)
+okladka (twarda|miękka)>
+<!-- Lub wersja z "none":
+<!ATTLIST ksiazka nr CDATA #REQUIRED 
+typ (papierowa|e-book) #REQUIRED
+okładka (twarda|miękka|none) #REQUIRED> 
+"none" w przypadku, gdy książka jest elektroniczną i nie ma żadnej okładki -->
+
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>
