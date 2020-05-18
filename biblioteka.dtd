@@ -1,13 +1,14 @@
-<!ELEMENT biblioteka (dzial+, pracownicy, czytelnicy, rezerwacja)>
 
-<!ELEMENT dzial (ksiazki)>
-<!ELEMENT pracownicy ()>
-<!ELEMENT czytelnicy ()>
-<!ELEMENT rezerwacja ()>
+<!ELEMENT biblioteka (ksiazki, pracownicy, czytelnicy, rezerwacja)>
 
-<!ELEMENT ksiazki (ksiazka+)>
+<!-- ksiazki -->
+<!ELEMENT ksiazki (dzial+)>
+<!ELEMENT dzial (oddzial+, odd+)>
+<!ATTLIST odd kod PCDATA #REQUIRED>
+<!ELEMENT oddzial (ksiazka+)>
+<!ATTLIST oddzial nazwa CDATA #REQUIRED>
+<!ELEMENT ksiazka (tytul, autor, rok, opis)>
 
-<!ELEMENT ksiazka (tytul, autor, opis, ...)>
 <!ATTLIST ksiazka nr CDATA #REQUIRED 
 typ (papierowa|e-book)
 okladka (twarda|miękka)>
@@ -17,6 +18,42 @@ typ (papierowa|e-book) #REQUIRED
 okładka (twarda|miękka|none) #REQUIRED> 
 "none" w przypadku, gdy książka jest elektroniczną i nie ma żadnej okładki -->
 
-<!ELEMENT tytul (#PCDATA)>
-<!ELEMENT autor (#PCDATA)>
-<!ELEMENT opis (#PCDATA)>
+<!ELEMENT tytul (#CDATA)>
+<!ELEMENT autor (#CDATA)>
+<!ELEMENT rok (#CDATA)>
+<!ELEMENT opis (#CDATA)>
+
+<!-- pracownicy -->
+<!ELEMENT pracownicy (pracownik+)>
+<!ELEMENT pracownik (imie, nazwisko, PESEL, posada, adres, telefon)>
+<!ATTLIST pracownik id CDATA #REQUIRED>
+<!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
+<!ELEMENT imie (#CDATA)>
+<!ELEMENT nazwisko (#CDATA)>
+<!ELEMENT PESEL (#CDATA)>
+<!ELEMENT posada (#CDATA)>
+<!ELEMENT telefon (#CDATA)>
+<!ELEMENT miasto (#CDATA)>
+<!ELEMENT ulica (#CDATA)>
+<!ELEMENT nr_domu (#CDATA)>
+<!ELEMENT nr_mieszkania (#CDATA)>
+
+<!-- czytelnicy -->
+<!ELEMENT czytelnicy (czytelnik+)>
+<!ELEMENT czytelnik (imie, nazwisko, PESEL?, adres, telefon, email?, punkty)>
+<!ATTLIST id CDATA #REQUIRED
+status CDATA #REQUIRED>
+<!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
+<!ELEMENT imie (#CDATA)>
+<!ELEMENT nazwisko (#CDATA)>
+<!ELEMENT PESEL (#CDATA)>
+<!ELEMENT telefon (#CDATA)>
+<!ELEMENT email (#CDATA)>
+<!ELEMENT punkty (#PCDATA)>
+<!ELEMENT miasto (#CDATA)>
+<!ELEMENT ulica (#CDATA)>
+<!ELEMENT nr_domu (#CDATA)>
+<!ELEMENT nr_mieszkania (#CDATA)>
+
+<!-- rezerwacja -->
+<!ELEMENT rezerwacja ()>
