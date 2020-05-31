@@ -63,6 +63,6 @@ Periodyk: gaz, kat, czp -->
     <imie>...</imie>
     <status>...</status> <!-- ref @status -->
    </miejsce>
+  </kolejka>
  </rezerwacja>
- 
 </biblioteka>
