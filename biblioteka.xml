@@ -2,22 +2,60 @@
 <!DOCTYPE uczelnia SYSTEM "biblioteka.dtd">
 <biblioteka>
  <ksiazki>
-  <dzial nazwa="...">  <!-- nazwa = nauka, rozrywka, historyczne (archiwum), periodyk? (gazety/katalogi/czasopisma) --> <!-- В качестве примера сделать 2-3 działa -->
-   <oddzial nazwa="..."> <!-- nazwa => Nauka: mfi, jez, biochem, human; Rozrywka: pp, po, dziec, mlod, fant, krymsen, thm; Historyczne: hist;
-Periodyk: gaz, kat, czp -->
-    <ksiazka nr="..." typ="..." okladka="...">  <!-- nr = [A-Z]*[0-9]* lub [A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9]; typ = papierowa, e-book --> 
-    <!-- okładka (nie jest wymagane) = twarda, miekka  lub  okładka (jest wymagane) = twarda, miekka, none ? --> <!-- В качестве примера сделать 2-3 ksiazki -->
-     <tytul>...</tytul>
-     <autor>...</autor> <!-- "Periodyk" nie ma autora, dlatego "autor" nie jest wymagany..? -->
-     <rok>...</rok>
-     <opis>...</opis>
+  <dzial nazwa="nauka">
+   <oddzial nazwa="mfi">
+    <ksiazka nr="J2000" typ="papierowa" okladka="miekka">
+     <tytul>Java - is easy!</tytul>
+     <autor>Jan Kowalski</autor>
+     <rok>2016</rok>
+     <opis>Myślisz że nigdy nie nauczysz się Javy? Nie martw się! Ta książka udowodni Ci że Java jest łatwa. To co? Lecimy? ;)</opis>
+    </ksiazka>
+    <ksiazka nr="CDBB-0225-338" typ="papierowa" okladka="twarda">
+     <tytul>SQL. Od podstaw do mistrza</tytul>
+     <autor>Anna Nowak</autor>
+     <rok>2019</rok>
+     <opis>Chcesz się nauczyć tworzyć własne bazy danych? Nowa książka od Anny Nowak pomoże Ci w tym.</opis>
     </ksiazka>
    </oddzial>
-   <odd kod="...">...</odd> <!-- kod oddziału który będzie odpowiadać za całą nazwę -->
-   <!-- Mat/Fiz/Inf - mfi; Nauka języków obcych - jez; Biologia/Chemia - biochem; Nauki Humanistyczne - human -->
-   <!-- Literatura piękna Polska - pp; Literatura piękna obca - po; Dla dzieci - dziec; Dla młodzieży - mlod; Sci-fi i fantasy - fant;
- Kryminał/Sensacja - krymsen; Thriller/Horror/Mistyka - thm; -->
-   <!-- historyczne - hist --> <!-- gazety - gaz; katalogi - kat, czasopisma - czp -->
+   <oddzial nazwa="jez">
+    <ksiazka nr="EL6594" typ="e-book" okladka="none">
+     <tytul>English. Learn how to speak freely</tytul>
+     <autor>Tina Jank</autor>
+     <rok>2020</rok>
+     <opis>Want to know how to make a conversatiom like a native english speaker? Learn from the best technique, based on the debate method</opis>
+    </ksiazka>
+   </oddzial>
+   <odd kod="mfi">Matematyka, Fizyka i Informatyka</odd>
+   <odd kod="jez">Nauka języków obcych</odd>
+  </dzial>
+
+  <dzial nazwa="rozrywka">
+   <oddzial nazwa="dziec">
+    <ksiazka nr="ISBN10132222" typ="papierowa" okladka="miekka">
+     <tytul>Kubuś Puchatek</tytul>
+     <autor>A.A.Milne</autor>
+     <rok>2017</rok>
+     <opis>Wzruszające, pełne liryzmu przygody Krzysia i jego przyjaciół w Stumilowym Lesie</opis>
+    </ksiazka>
+    <ksiazka nr="ISBN79839919" typ="papierowa" okladka="twarda">
+     <tytul>Akademia Pana Kleksa</tytul>
+     <autor>Jan Brzechwa</autor>
+     <rok>2017</rok>
+     <opis>Pod czujnym okiem niesamowitego Pana Kleksa oraz jego gadającego szpaka Mateusza chłopcy spędzają całe dnie na zabawach i uczeniu się niesamowicie ciekawych i praktycznych rzeczy!
+Ich sąsiadami są bochaterowie znanych bajek, na obiad jedzą kolorowe szkiełka i malowane potrawy, swoje sny przechowują w sennych lusterkach, a największą nagrodą są dla nich piegi Pana Kleksa. Każdy dzień przynosi im nowe, fantastyczne przygody.
+Pewnego razu równowaga w Akademii zostaje jednak zachwiana, gdy do chłopców dołącza nowy, tajemniczy uczeń...</opis>
+    </ksiazka>
+   </oddzial>
+   <oddzial nazwa="mlod">
+    <ksiazka nr="DZ29" typ="papierowa" okladka="twarda">
+     <tytul>Dziennik 29. Interaktywna gra książkowa</tytul>
+     <autor>Chassapakis Dimitris</autor>
+     <rok>2019</rok>
+     <opis>Interaktywna gra książkowa "Dziennik 29" - ewolucyjny etap w rozwoju książki</opis>
+    </ksiazka>
+   </oddzial>
+   <odd kod="mlod">Książki dla młodzieży</odd>
+   <odd kod="dziec">Książki dla dzieci</odd>
   </dzial>
  </ksiazki>
 
