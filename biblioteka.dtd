@@ -25,13 +25,13 @@ okładka (twarda|miękka|none) #REQUIRED>
 
 <!-- pracownicy -->
 <!ELEMENT pracownicy (pracownik+)>
-<!ELEMENT pracownik (imie, nazwisko, PESEL, posada, adres, telefon)>
+<!ELEMENT pracownik (imie, nazwisko, PESEL, stanowisko, adres, telefon)>
 <!ATTLIST pracownik id CDATA #REQUIRED>
 <!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
 <!ELEMENT imie (#CDATA)>
 <!ELEMENT nazwisko (#CDATA)>
 <!ELEMENT PESEL (#CDATA)>
-<!ELEMENT posada (#CDATA)>
+<!ELEMENT stanowisko (#CDATA)>
 <!ELEMENT telefon (#CDATA)>
 <!ELEMENT miasto (#CDATA)>
 <!ELEMENT ulica (#CDATA)>
