@@ -1,192 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE uczelnia SYSTEM "biblioteka.dtd">
+<!DOCTYPE biblioteka SYSTEM "C:\Program Files\Liquid Technologies\Liquid Studio 2020\Biblioteka\Schemas\biblioteka.dtd">  <!-- -->
 <biblioteka>
- <ksiazki>
-  <dzial nazwa="nauka">
-   <oddzial nazwa="mfi">
-    <ksiazka nr="J2000" typ="papierowa" okladka="miekka">
-     <tytul>Java - is easy!</tytul>
-     <autor>Jan Kowalski</autor>
-     <rok>2016</rok>
-     <opis>Myślisz że nigdy nie nauczysz się Javy? Nie martw się! Ta książka udowodni Ci że Java jest łatwa. To co? Lecimy? ;)</opis>
-    </ksiazka>
-    <ksiazka nr="CDBB-0225-338" typ="papierowa" okladka="twarda">
-     <tytul>SQL. Od podstaw do mistrza</tytul>
-     <autor>Anna Nowak</autor>
-     <rok>2019</rok>
-     <opis>Chcesz się nauczyć tworzyć własne bazy danych? Nowa książka od Anny Nowak pomoże Ci w tym.</opis>
-    </ksiazka>
-   </oddzial>
-   <oddzial nazwa="jez">
-    <ksiazka nr="EL6594" typ="e-book" okladka="none">
-     <tytul>English. Learn how to speak freely</tytul>
-     <autor>Tina Jank</autor>
-     <rok>2020</rok>
-     <opis>Want to know how to make a conversatiom like a native english speaker? Learn from the best technique, based on the debate method</opis>
-    </ksiazka>
-   </oddzial>
-   <odd kod="mfi">Matematyka, Fizyka i Informatyka</odd>
-   <odd kod="jez">Nauka języków obcych</odd>
-  </dzial>
+    <ksiazki>
+        <dzial nazwa="nauka">
+            <oddzial nazwa="mfi">
+                <ksiazka nr="J2000" typ="papierowa" okladka="miekka">
+                    <tytul>Java - is easy!</tytul>
+                    <autor>Jan Kowalski</autor>
+                    <rok>2016</rok>
+                    <opis>Myślisz że nigdy nie nauczysz się Javy? Nie martw się! Ta książka udowodni Ci że Java jest łatwa. To co? Lecimy? ;)</opis>
+                </ksiazka>
+                <ksiazka nr="CDBB-0225-338" typ="papierowa" okladka="twarda">
+                    <tytul>SQL. Od podstaw do mistrza</tytul>
+                    <autor>Anna Nowak</autor>
+                    <rok>2019</rok>
+                    <opis>Chcesz się nauczyć tworzyć własne bazy danych? Nowa książka od Anny Nowak pomoże Ci w tym.</opis>
+                </ksiazka>
+            </oddzial>
+            <oddzial nazwa="jez">
+                <ksiazka nr="EL6594" typ="e-book" okladka="none">
+                    <tytul>English. Learn how to speak freely</tytul>
+                    <autor>Tina Jank</autor>
+                    <rok>2020</rok>
+                    <opis>Want to know how to make a conversatiom like a native english speaker? Learn from the best technique, based on the debate method</opis>
+                </ksiazka>
+            </oddzial>
+            <odd kod="mfi">Matematyka, Fizyka i Informatyka</odd>
+            <odd kod="jez">Nauka języków obcych</odd>
+        </dzial>
 
-  <dzial nazwa="rozrywka">
-   <oddzial nazwa="dziec">
-    <ksiazka nr="ISBN10132222" typ="papierowa" okladka="miekka">
-     <tytul>Kubuś Puchatek</tytul>
-     <autor>A.A.Milne</autor>
-     <rok>2017</rok>
-     <opis>Wzruszające, pełne liryzmu przygody Krzysia i jego przyjaciół w Stumilowym Lesie</opis>
-    </ksiazka>
-    <ksiazka nr="ISBN79839919" typ="papierowa" okladka="twarda">
-     <tytul>Akademia Pana Kleksa</tytul>
-     <autor>Jan Brzechwa</autor>
-     <rok>2017</rok>
-     <opis>Pod czujnym okiem niesamowitego Pana Kleksa oraz jego gadającego szpaka Mateusza chłopcy spędzają całe dnie na zabawach i uczeniu się niesamowicie ciekawych i praktycznych rzeczy!
-Ich sąsiadami są bochaterowie znanych bajek, na obiad jedzą kolorowe szkiełka i malowane potrawy, swoje sny przechowują w sennych lusterkach, a największą nagrodą są dla nich piegi Pana Kleksa. Każdy dzień przynosi im nowe, fantastyczne przygody.
-Pewnego razu równowaga w Akademii zostaje jednak zachwiana, gdy do chłopców dołącza nowy, tajemniczy uczeń...</opis>
-    </ksiazka>
-   </oddzial>
-   <oddzial nazwa="mlod">
-    <ksiazka nr="DZ29" typ="papierowa" okladka="twarda">
-     <tytul>Dziennik 29. Interaktywna gra książkowa</tytul>
-     <autor>Chassapakis Dimitris</autor>
-     <rok>2019</rok>
-     <opis>Interaktywna gra książkowa "Dziennik 29" - ewolucyjny etap w rozwoju książki</opis>
-    </ksiazka>
-   </oddzial>
-   <odd kod="mlod">Książki dla młodzieży</odd>
-   <odd kod="dziec">Książki dla dzieci</odd>
-  </dzial>
- </ksiazki>
+        <dzial nazwa="rozrywka">
+            <oddzial nazwa="dziec">
+                <ksiazka nr="ISBN10132222" typ="papierowa" okladka="miekka">
+                    <tytul>Kubuś Puchatek</tytul>
+                    <autor>A.A.Milne</autor>
+                    <rok>2017</rok>
+                    <opis>Wzruszające, pełne liryzmu przygody Krzysia i jego przyjaciół w Stumilowym Lesie</opis>
+                </ksiazka>
+                <ksiazka nr="ISBN79839919" typ="papierowa" okladka="twarda">
+                    <tytul>Akademia Pana Kleksa</tytul>
+                    <autor>Jan Brzechwa</autor>
+                    <rok>2017</rok>
+                    <opis>
+                        Pod czujnym okiem niesamowitego Pana Kleksa oraz jego gadającego szpaka Mateusza chłopcy spędzają całe dnie na zabawach i uczeniu się niesamowicie ciekawych i praktycznych rzeczy!
+                        Ich sąsiadami są bochaterowie znanych bajek, na obiad jedzą kolorowe szkiełka i malowane potrawy, swoje sny przechowują w sennych lusterkach, a największą nagrodą są dla nich piegi Pana Kleksa. Każdy dzień przynosi im nowe, fantastyczne przygody.
+                        Pewnego razu równowaga w Akademii zostaje jednak zachwiana, gdy do chłopców dołącza nowy, tajemniczy uczeń...
+                    </opis>
+                </ksiazka>
+            </oddzial>
+            <oddzial nazwa="mlod">
+                <ksiazka nr="DZ29" typ="papierowa" okladka="twarda">
+                    <tytul>Dziennik 29. Interaktywna gra książkowa</tytul>
+                    <autor>Chassapakis Dimitris</autor>
+                    <rok>2019</rok>
+                    <opis>Interaktywna gra książkowa "Dziennik 29" - ewolucyjny etap w rozwoju książki</opis>
+                </ksiazka>
+            </oddzial>
+            <odd kod="mlod">Książki dla młodzieży</odd>
+            <odd kod="dziec">Książki dla dzieci</odd>
+        </dzial>
+    </ksiazki>
 
- <pracownicy>
-  <pracownik id="10001">
-   <imie>Ela</imie>
-   <nazwisko>Szymańska</nazwisko>
-   <PESEL>08095128684</PESEL>
-   <stanowisko>bibliotekarz</stanowisko> 
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Grunwaldska</ulica>
-    <nr_domu>72</nr_domu>
-    <nr_mieszkania>64</nr_mieszkania>
-   </adres>
-   <telefon>696396929</telefon>
-  </pracownik>
-  
-  <pracownik id="10002">
-   <imie>Włodzimierz</imie>
-   <nazwisko>Cichocki</nazwisko>
-   <PESEL>06954962187</PESEL>
-   <stanowisko>administrator</stanowisko>
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Kartuska</ulica>
-    <nr_domu>49</nr_domu>
-    <nr_mieszkania>17</nr_mieszkania>
-   </adres>
-   <telefon>517648927</telefon>
-  </pracownik>
-  
-  <pracownik id="10003">
-   <imie>Mariusz</imie>
-   <nazwisko>Kamiński</nazwisko>
-   <PESEL>00265894723</PESEL>
-   <stanowisko>archiwista</stanowisko>
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Politechniczna</ulica>
-    <nr_domu>13</nr_domu>
-    <nr_mieszkania/>
-   </adres>
-   <telefon>696489638</telefon>
-  </pracownik>
- </pracownicy>
- 
- <czytelnicy>
-  <czytelnik id="Z10600" status="przyjaciel ksiazek">
-   <imie>Zlata</imie>
-   <nazwisko>Jankowska</nazwisko>
-   <PESEL>00250122240</PESEL>
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Grunwaldska</ulica>
-    <nr_domu>72</nr_domu>
-    <nr_mieszkania>77</nr_mieszkania>
-   </adres>
-   <telefon>696396819</telefon>
-   <email>aurum.cat.jank@gmail.com</email>
-   <punkty>1</punkty>
-  </czytelnik>
+    <pracownicy>
+        <pracownik id="10001">
+            <imie>Ela</imie>
+            <nazwisko>Szymańska</nazwisko>
+            <PESEL>08095128684</PESEL>
+            <posada>bibliotekarz</posada>
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Grunwaldska</ulica>
+                <nr_domu>72</nr_domu>
+                <nr_mieszkania>64</nr_mieszkania>
+            </adres>
+            <telefon>696396929</telefon>
+        </pracownik>
+        <pracownik id="10002">
+            <imie>Włodzimierz</imie>
+            <nazwisko>Cichocki</nazwisko>
+            <PESEL>06954962187</PESEL>
+            <posada>administrator</posada>
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Kartuska</ulica>
+                <nr_domu>49</nr_domu>
+                <nr_mieszkania>17</nr_mieszkania>
+            </adres>
+            <telefon>517648927</telefon>
+        </pracownik>
+        <pracownik id="10003">
+            <imie>Mariusz</imie>
+            <nazwisko>Kamiński</nazwisko>
+            <PESEL>00265894723</PESEL>
+            <posada>archiwista</posada>
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Politechniczna</ulica>
+                <nr_domu>13</nr_domu>
+                <nr_mieszkania/>
+            </adres>
+            <telefon>696489638</telefon>
+        </pracownik>
+    </pracownicy>
 
-  <czytelnik id="D10601" status="traf">
-   <imie>Dominik</imie>
-   <nazwisko>Cesarz</nazwisko>
-   <PESEL />
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Bydgoska</ulica>
-    <nr_domu>4</nr_domu>
-    <nr_mieszkania>24</nr_mieszkania>
-   </adres>
-   <telefon>517846923</telefon>
-   <email>WielkiCesarz@gmail.com</email>
-   <punkty>11</punkty>
-  </czytelnik>
+    <czytelnicy>
+        <czytelnik id="Z10600" status="przyjaciel ksiazek">
+            <imie>Zlata</imie>
+            <nazwisko>Jankowska</nazwisko>
+            <PESEL>00250122240</PESEL>
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Grunwaldska</ulica>
+                <nr_domu>72</nr_domu>
+                <nr_mieszkania>77</nr_mieszkania>
+            </adres>
+            <telefon>696396819</telefon>
+            <email>aurum.cat.jank@gmail.com</email>
+            <punkty>1</punkty>
+        </czytelnik>
 
-  <czytelnik id="A10602" status="wrog ksiazek">
-   <imie>Adam</imie>
-   <nazwisko>Pawłowski</nazwisko>
-   <PESEL>12578964345</PESEL>
-   <adres>
-    <miasto>Sopot</miasto>
-    <ulica>Malopolska</ulica>
-    <nr_domu>18</nr_domu>
-    <nr_mieszkania>15</nr_mieszkania>
-   </adres>
-   <telefon>696548732</telefon>
-   <email>apawlowski@gmail.com</email>
-   <punkty>91</punkty>
-  </czytelnik>  
+        <czytelnik id="D10601" status="traf">
+            <imie>Dominik</imie>
+            <nazwisko>Cesarz</nazwisko>
+            <PESEL />
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Bydgoska</ulica>
+                <nr_domu>4</nr_domu>
+                <nr_mieszkania>24</nr_mieszkania>
+            </adres>
+            <telefon>517846923</telefon>
+            <email>WielkiCesarz@gmail.com</email>
+            <punkty>11</punkty>
+        </czytelnik>
 
-  <czytelnik id="I10603" status="osoba podejrzana">
-   <imie>Irena</imie>
-   <nazwisko>Kwiat</nazwisko>
-   <PESEL>54896732152</PESEL> <!-- Nie jest wymagane? -->
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Drożyny</ulica>
-    <nr_domu>1</nr_domu>
-    <nr_mieszkania>1</nr_mieszkania>
-   </adres>
-   <telefon>696548732</telefon>
-   <email>Kwiatek00@gmail.com</email>
-   <punkty>51</punkty>
-  </czytelnik>
+        <czytelnik id="A10602" status="wrog ksiazek">
+            <imie>Adam</imie>
+            <nazwisko>Pawłowski</nazwisko>
+            <PESEL>12578964345</PESEL>
+            <adres>
+                <miasto>Sopot</miasto>
+                <ulica>Malopolska</ulica>
+                <nr_domu>18</nr_domu>
+                <nr_mieszkania>15</nr_mieszkania>
+            </adres>
+            <telefon>696548732</telefon>
+            <email>apawlowski@gmail.com</email>
+            <punkty>91</punkty>
+        </czytelnik>
 
-  <czytelnik id="R10604" status="ufaj ale sprawdzaj">
-   <imie>Raisa</imie>
-   <nazwisko>Norovlanska</nazwisko>
-   <PESEL />
-   <adres>
-    <miasto>Gdańsk</miasto>
-    <ulica>Świętego Ducha</ulica>
-    <nr_domu>20</nr_domu>
-    <nr_mieszkania>15</nr_mieszkania>
-   </adres>
-   <telefon>694563218</telefon>
-   <email>Norovlankaya1@yandex.ua</email>
-   <punkty>31</punkty>
-  </czytelnik>
- </czytelnicy>
+        <czytelnik id="I10603" status="osoba podejrzana">
+            <imie>Irena</imie>
+            <nazwisko>Kwiat</nazwisko>
+            <PESEL>54896732152</PESEL> 
+            <!-- Nie jest wymagane? -->
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Drożyny</ulica>
+                <nr_domu>1</nr_domu>
+                <nr_mieszkania>1</nr_mieszkania>
+            </adres>
+            <telefon>696548732</telefon>
+            <email>Kwiatek00@gmail.com</email>
+            <punkty>51</punkty>
+        </czytelnik>
 
- <rezerwacja>
-  <kolejka id_k="..."> <!-- id_k - (ref @nr) id książki, dla której stworzona jest kolejka; kolejka się tworzy w przypadku kiedy wszystkie egzemplarze książki są zajęte -->
-   <miejsce>
-    <id_cz>...</id_cz>
-    <imie>...</imie>
-    <status>...</status> <!-- ref @status -->
-   </miejsce>
-  </kolejka>
- </rezerwacja>
+        <czytelnik id="R10604" status="ufaj ale sprawdzaj">
+            <imie>Raisa</imie>
+            <nazwisko>Norovlanska</nazwisko>
+            <PESEL />
+            <adres>
+                <miasto>Gdańsk</miasto>
+                <ulica>Świętego Ducha</ulica>
+                <nr_domu>20</nr_domu>
+                <nr_mieszkania>15</nr_mieszkania>
+            </adres>
+            <telefon>694563218</telefon>
+            <email>Norovlanskaya1@yandex.ua</email>
+            <punkty>31</punkty>
+        </czytelnik>
+    </czytelnicy>
+
+    <rezerwacja>
+        <kolejka id_k="EL6594">
+            <miejsce nr="1">
+                <id_cz>Z10600</id_cz>
+                <imie>Zlata</imie>
+            </miejsce>
+            <miejsce nr="2">
+                <id_cz>I10603</id_cz>
+                <imie>Irena</imie>
+            </miejsce>
+        </kolejka>
+        <kolejka id_k="DZ29">
+            <miejsce nr="1">
+                <id_cz>Z10600</id_cz>
+                <imie>Zlata</imie>
+            </miejsce>
+        </kolejka>
+    </rezerwacja>
 </biblioteka>
