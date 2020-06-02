@@ -1,0 +1,39 @@
+/* Ksiazki */
+ksiazki{}
+dzial{}
+oddzial{}
+ksiazka{}
+tytul{}
+autor{}
+rok{}
+opis{}
+
+/* Pracownicy */
+pracownicy{}
+pracownik{}
+imie{}
+nazwisko{}
+PESEL{}
+posada{}
+telefon{}
+adres{}
+/* miasto{} ulica{} nr_domu{} nr_mieszkania{} */
+
+/* Czytelnicy */
+czytelnicy{}
+czytelnik{}
+imie{}
+nazwisko{}
+PESEL{}
+posada{}
+telefon{}
+email{}
+punkty{}
+adres{}
+/* miasto{} ulica{} nr_domu{} nr_mieszkania{} */
+
+/* Rezerwacja */
+kolejka{}
+miejsce{}
+id_cz{}
+imie{}
