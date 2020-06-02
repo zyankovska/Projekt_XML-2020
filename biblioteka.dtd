@@ -9,7 +9,7 @@
 <!ATTLIST oddzial nazwa CDATA #REQUIRED>
 <!ELEMENT ksiazka (tytul, autor, rok, opis)>
 
-<!ATTLIST ksiazka nr CDATA #REQUIRED 
+<!ATTLIST ksiazka nr ID #REQUIRED 
 typ (papierowa|e-book)
 okladka (twarda|miękka)>
 <!-- Lub wersja z "none":
@@ -25,13 +25,13 @@ okładka (twarda|miękka|none) #REQUIRED>
 
 <!-- pracownicy -->
 <!ELEMENT pracownicy (pracownik+)>
-<!ELEMENT pracownik (imie, nazwisko, PESEL, stanowisko, adres, telefon)>
+<!ELEMENT pracownik (imie, nazwisko, PESEL, posada, adres, telefon)>
 <!ATTLIST pracownik id CDATA #REQUIRED>
 <!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
 <!ELEMENT imie (#CDATA)>
 <!ELEMENT nazwisko (#CDATA)>
 <!ELEMENT PESEL (#CDATA)>
-<!ELEMENT stanowisko (#CDATA)>
+<!ELEMENT posada (#CDATA)>
 <!ELEMENT telefon (#CDATA)>
 <!ELEMENT miasto (#CDATA)>
 <!ELEMENT ulica (#CDATA)>
@@ -39,10 +39,10 @@ okładka (twarda|miękka|none) #REQUIRED>
 <!ELEMENT nr_mieszkania (#CDATA)>
 
 <!-- czytelnicy -->
-<!ELEMENT czytelnicy (czytelnik+)>
+<!ELEMENT czytelnicy (czytelnik*)>
 <!ELEMENT czytelnik (imie, nazwisko, PESEL?, adres, telefon, email?, punkty)>
 <!ATTLIST id CDATA #REQUIRED
-status CDATA #REQUIRED>
+status ID #REQUIRED>
 <!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
 <!ELEMENT imie (#CDATA)>
 <!ELEMENT nazwisko (#CDATA)>
@@ -56,4 +56,9 @@ status CDATA #REQUIRED>
 <!ELEMENT nr_mieszkania (#CDATA)>
 
 <!-- rezerwacja -->
-<!ELEMENT rezerwacja ()>
+<!ELEMENT rezerwacja (kolejka*)>
+<!ELEMENT kolejka (miejsce+)>
+<!ELEMENT miejsce (id_cz, imie)>
+
+<!ATTLIST kolejka id_k IDREF #REQUIRED>
+<!ATTLIST miejsce nr CDATA status IDREF #REQUIRED>
