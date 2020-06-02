@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+    <xs:complexType name="bibliotekaType">
+        <xs:sequence >
+            <xs:element name="ksiazki" type="ksiazkiType" />
+            <xs:element name="pracownicy" type="pracownicyType" />
+            <xs:element name="czytelnicy" type="czytelnicyType" />
+            <xs:element name="rezerwacja" type="rezerwacjaType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="biblioteka" type="bibliotekaType" />
+
+    <xs:complexType name="ksiazkiType"  >
+        <xs:sequence >
+            <xs:element name="dzial" type="dzialType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ksiazki" type="ksiazkiType" />
+
+    <xs:complexType name="dzialType"  >
+        <xs:sequence >
+            <xs:element name="oddzial" type="oddzialType" maxOccurs="unbounded"/>
+            <xs:element name="odd" type="oddType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="nazwa" use="required" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="dzial" type="dzialType" />
+
+    <xs:complexType name="oddType"  mixed="true" >
+        <xs:sequence >
+        </xs:sequence>
+        <xs:attribute name="kod" use="required" type="xs:IDREF" />
+    </xs:complexType>
+    <xs:element name="odd" type="oddType" />
+
+    <xs:complexType name="oddzialType"  >
+        <xs:sequence >
+            <xs:element name="ksiazka" type="ksiazkaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="nazwa" use="required" type="xs:ID" />
+    </xs:complexType>
+    <xs:element name="oddzial" type="oddzialType" />
+
+    <xs:complexType name="ksiazkaType"  >
+        <xs:sequence >
+            <xs:element name="tytul" type="tytulType" />
+            <xs:element name="autor" type="autorType" />
+            <xs:element name="rok" type="rokType" />
+            <xs:element name="opis" type="opisType" />
+        </xs:sequence>
+        <xs:attribute name="nr" use="required" type="xs:ID" />
+        <xs:attribute name="typ" use="required" >
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="papierowa" />
+                    <xs:enumeration value="e-book" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="okladka" use="required" >
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="twarda" />
+                    <xs:enumeration value="miekka" />
+                    <xs:enumeration value="none" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:element name="ksiazka" type="ksiazkaType" />
+
+    <xs:complexType name="tytulType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="tytul" type="tytulType" />
+
+    <xs:complexType name="autorType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="autor" type="autorType" />
+
+    <xs:complexType name="rokType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="rok" type="rokType" />
+
+    <xs:complexType name="opisType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="opis" type="opisType" />
+
+    <xs:complexType name="pracownicyType"  >
+        <xs:sequence >
+            <xs:element name="pracownik" type="pracownikType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="pracownicy" type="pracownicyType" />
+
+    <xs:complexType name="pracownikType"  >
+        <xs:sequence >
+            <xs:element name="imie" type="imieType" />
+            <xs:element name="nazwisko" type="nazwiskoType" />
+            <xs:element name="PESEL" type="PESELType" />
+            <xs:element name="posada" type="posadaType" />
+            <xs:element name="adres" type="adresType" />
+            <xs:element name="telefon" type="telefonType" />
+        </xs:sequence>
+        <xs:attribute name="id" use="required" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="pracownik" type="pracownikType" />
+
+    <xs:complexType name="adresType"  >
+        <xs:sequence >
+            <xs:element name="miasto" type="miastoType" />
+            <xs:element name="ulica" type="ulicaType" />
+            <xs:element name="nr_domu" type="nr_domuType" />
+            <xs:element name="nr_mieszkania" type="nr_mieszkaniaType" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="adres" type="adresType" />
+
+    <xs:complexType name="imieType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="imie" type="imieType" />
+
+    <xs:complexType name="nazwiskoType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="nazwisko" type="nazwiskoType" />
+
+    <xs:complexType name="PESELType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="PESEL" type="PESELType" />
+
+    <xs:complexType name="posadaType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="posada" type="posadaType" />
+
+    <xs:complexType name="telefonType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="telefon" type="telefonType" />
+
+    <xs:complexType name="miastoType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="miasto" type="miastoType" />
+
+    <xs:complexType name="ulicaType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="ulica" type="ulicaType" />
+
+    <xs:complexType name="nr_domuType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="nr_domu" type="nr_domuType" />
+
+    <xs:complexType name="nr_mieszkaniaType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="nr_mieszkania" type="nr_mieszkaniaType" />
+
+    <xs:complexType name="czytelnicyType"  >
+        <xs:sequence >
+            <xs:element name="czytelnik" type="czytelnikType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="czytelnicy" type="czytelnicyType" />
+
+    <xs:complexType name="czytelnikType"  >
+        <xs:sequence >
+            <xs:element name="imie" type="imieType" />
+            <xs:element name="nazwisko" type="nazwiskoType" />
+            <xs:element name="PESEL" type="PESELType" />
+            <xs:element name="adres" type="adresType" />
+            <xs:element name="telefon" type="telefonType" />
+            <xs:element name="email" type="emailType" />
+            <xs:element name="punkty" type="punktyType" />
+        </xs:sequence>
+        <xs:attribute name="id" use="required" type="xs:string" />
+        <xs:attribute name="status" use="required" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="czytelnik" type="czytelnikType" />
+
+    <xs:complexType name="emailType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="email" type="emailType" />
+
+    <xs:complexType name="punktyType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="punkty" type="punktyType" />
+
+    <xs:complexType name="rezerwacjaType"  >
+        <xs:sequence >
+            <xs:element name="kolejka" type="kolejkaType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="rezerwacja" type="rezerwacjaType" />
+
+    <xs:complexType name="kolejkaType"  >
+        <xs:sequence >
+            <xs:element name="miejsce" type="miejsceType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id_k" use="required" type="xs:IDREF" />
+    </xs:complexType>
+    <xs:element name="kolejka" type="kolejkaType" />
+
+    <xs:complexType name="miejsceType"  >
+        <xs:sequence >
+            <xs:element name="id_cz" type="id_czType" />
+            <xs:element name="imie" type="imieType" />
+        </xs:sequence>
+        <xs:attribute name="nr" use="required" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="miejsce" type="miejsceType" />
+
+    <xs:complexType name="id_czType"  >
+        <xs:simpleContent>
+            <xs:extension base="xs:string" >
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="id_cz" type="id_czType" />
+
+</xs:schema>
