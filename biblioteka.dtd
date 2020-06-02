@@ -1,64 +1,51 @@
-
 <!ELEMENT biblioteka (ksiazki, pracownicy, czytelnicy, rezerwacja)>
 
 <!-- ksiazki -->
 <!ELEMENT ksiazki (dzial+)>
 <!ELEMENT dzial (oddzial+, odd+)>
-<!ATTLIST odd kod PCDATA #REQUIRED>
+<!ATTLIST dzial nazwa CDATA #REQUIRED>
+<!ELEMENT odd (#PCDATA)>
+<!ATTLIST odd kod IDREF #REQUIRED>
 <!ELEMENT oddzial (ksiazka+)>
-<!ATTLIST oddzial nazwa CDATA #REQUIRED>
+<!ATTLIST oddzial nazwa ID #REQUIRED>
 <!ELEMENT ksiazka (tytul, autor, rok, opis)>
 
 <!ATTLIST ksiazka nr ID #REQUIRED 
-typ (papierowa|e-book)
-okladka (twarda|miękka)>
-<!-- Lub wersja z "none":
-<!ATTLIST ksiazka nr CDATA #REQUIRED 
 typ (papierowa|e-book) #REQUIRED
-okładka (twarda|miękka|none) #REQUIRED> 
-"none" w przypadku, gdy książka jest elektroniczną i nie ma żadnej okładki -->
+okladka (twarda|miekka|none) #REQUIRED>
 
-<!ELEMENT tytul (#CDATA)>
-<!ELEMENT autor (#CDATA)>
-<!ELEMENT rok (#CDATA)>
-<!ELEMENT opis (#CDATA)>
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT rok (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>
 
 <!-- pracownicy -->
 <!ELEMENT pracownicy (pracownik+)>
 <!ELEMENT pracownik (imie, nazwisko, PESEL, posada, adres, telefon)>
 <!ATTLIST pracownik id CDATA #REQUIRED>
 <!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
-<!ELEMENT imie (#CDATA)>
-<!ELEMENT nazwisko (#CDATA)>
-<!ELEMENT PESEL (#CDATA)>
-<!ELEMENT posada (#CDATA)>
-<!ELEMENT telefon (#CDATA)>
-<!ELEMENT miasto (#CDATA)>
-<!ELEMENT ulica (#CDATA)>
-<!ELEMENT nr_domu (#CDATA)>
-<!ELEMENT nr_mieszkania (#CDATA)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT PESEL (#PCDATA)>
+<!ELEMENT posada (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT miasto (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT nr_domu (#PCDATA)>
+<!ELEMENT nr_mieszkania (#PCDATA)>
 
 <!-- czytelnicy -->
 <!ELEMENT czytelnicy (czytelnik*)>
 <!ELEMENT czytelnik (imie, nazwisko, PESEL?, adres, telefon, email?, punkty)>
-<!ATTLIST id CDATA #REQUIRED
-status ID #REQUIRED>
-<!ELEMENT adres (miasto, ulica, nr_domu, nr_mieszkania?)>
-<!ELEMENT imie (#CDATA)>
-<!ELEMENT nazwisko (#CDATA)>
-<!ELEMENT PESEL (#CDATA)>
-<!ELEMENT telefon (#CDATA)>
-<!ELEMENT email (#CDATA)>
+<!ATTLIST czytelnik id CDATA #REQUIRED status CDATA #REQUIRED>
+<!ELEMENT email (#PCDATA)>
 <!ELEMENT punkty (#PCDATA)>
-<!ELEMENT miasto (#CDATA)>
-<!ELEMENT ulica (#CDATA)>
-<!ELEMENT nr_domu (#CDATA)>
-<!ELEMENT nr_mieszkania (#CDATA)>
 
 <!-- rezerwacja -->
 <!ELEMENT rezerwacja (kolejka*)>
 <!ELEMENT kolejka (miejsce+)>
 <!ELEMENT miejsce (id_cz, imie)>
+<!ELEMENT id_cz (#PCDATA)>
 
 <!ATTLIST kolejka id_k IDREF #REQUIRED>
-<!ATTLIST miejsce nr CDATA status IDREF #REQUIRED>
+<!ATTLIST miejsce nr CDATA #REQUIRED>
