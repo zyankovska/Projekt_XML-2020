@@ -1,0 +1,14 @@
+body{
+background-color: #C0C0C0;
+background-position: center center;
+background: auto;
+}
+
+.czytelnicy {
+font-family: arial;
+font-size: medium;
+font-style: normal;
+font-weight: 400;
+letter-spacing: normal;
+text-align: left;
+}
