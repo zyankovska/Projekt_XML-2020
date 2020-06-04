@@ -4,11 +4,68 @@ background-position: center center;
 background: auto;
 }
 
-.czytelnicy {
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    background: white;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+div.czytelnicy {
 font-family: arial;
 font-size: medium;
 font-style: normal;
 font-weight: 400;
 letter-spacing: normal;
 text-align: left;
+float: left;
+display: inline-block;
+background: #87CEFA;
+border: 1px solid black;
+margin: 20px;
+padding: 10px;
+overflow: hidden;
+vertical-align: top;
+}
+li:hover{
+    color: blue;
+}
+
+div.kolejka{
+	display: block;
+	background: lightgreen;
+	border: 1px solid black;
+	margin: 20px;
+    padding: 15px;
+    float: right;    
+}
+
+/* table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background: #87CEFA;
+} */
+
+tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th:hover{
+    background: white;
+}
+td:hover{
+    background: white;
 }
