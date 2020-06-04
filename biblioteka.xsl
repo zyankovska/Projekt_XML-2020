@@ -34,31 +34,23 @@
         </xsl:for-each>
     </xsl:template>
     
-        <xsl:template name="kolejka" match="rezerwacja/kolejka">
-            <h4>
-            </h4>
-            <tabel>
+    <xsl:template name="kolejka" match="kolejka">
+            <table>
                 <tr>
-                    <th>nr</th>
-                    <th>id czytelnika</th>
-                    <th>imie czytelnika</th>
+                    <th>Nr</th>
+                    <th>Id czytelnika</th>
+                    <th>Imie czytelnika</th>
                 </tr>
                 <xsl:for-each select="miejsce">
                     <xsl:call-template name="miejsce"/>
             </xsl:for-each>
-            </tabel>
+            </table>
     </xsl:template>
     <xsl:template name="miejsce" match="miejsce">
         <tr>
-            <td>
-                <xsl:value-of select="@nr"/>
-            </td>
-            <td>
-                <xsl:value-of select="id_cz"/>
-            </td>
-            <td>
-                <xsl:value-of select="imie"/>
-            </td>
+            <td><i><xsl:value-of select="@nr"/></i></td>
+            <td><xsl:value-of select="id_cz"/></td>
+            <td><xsl:value-of select="imie"/></td>
         </tr>
     </xsl:template>
 
