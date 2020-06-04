@@ -211,7 +211,7 @@ font-size: large;
 }
 
 pracownicy{
-background-color: #7FFFD4;
+background-color: #00FFFF;
 display: block;
 border: 1px solid black;
 margin: 20px;
@@ -219,7 +219,7 @@ padding: 10px;
 }
 
 pracownik{
-background-color: ef88ef;
+background-color: #00BFFF;
 
 border-width: thin;
 border-style: solid;
@@ -231,19 +231,32 @@ margin: 2%;
 }
 
 pracownik>imie{
-color: #008B8B;
+color: #0000FF;
 font-weight: bold;
 }
 pracownik>nazwisko{
-color: #008B8B;
+color: #0000FF;
 font-weight: bold;
+
 }
 pracownik>PESEL{
-text-decoration: underline;
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
 }
-posada{}
-pracownik>telefon{}
-pracownik>adres{}
+posada{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+}
+posada:hover{
+background-color: #ef88ef;
+}
+posada:before{
+content:"stanowisko: ";
+}
 
 /* Czytelnicy */
 
@@ -253,7 +266,7 @@ font-size: large;
 }
 
 czytelnicy{
-background-color: #E0FFFF;
+background-color: #ADD8E6;
 display: block;
 border: 1px solid black;
 margin: 20px;
@@ -261,7 +274,7 @@ padding: 10px;
 }
 
 czytelnik{
-background-color: #00BFFF;
+background-color: #6495ED;
 
 border-width: thin;
 border-style: solid;
@@ -279,11 +292,21 @@ czytelnik>nazwisko{
 color: #191970;
 font-weight: bold;
 }
-czytelnik>PESEL{}
-czytelnikt>elefon{}
-email{}
-punkty{}
-czytelnik>adres{}
+email{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+}
+punkty:before{
+content:"punkty karne: ";
+}
+punkty{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+}
 
 /* Rezerwacja */
 
@@ -293,14 +316,14 @@ font-size: large;
 }
 
 rezerwacja{
-background-color: #00BFFF;
+background-color: #AFEEEE;
 display: block;
 border: 1px solid black;
 margin: 20px;
 padding: 10px;
 }
 kolejka{
-background-color: #6495ED;
+background-color: #87CEEB;
 
 border-width: thin;
 border-style: solid;
@@ -310,20 +333,52 @@ display: block;
 width: 450px;
 margin: 2%;
 }
-miejsce{}
 id_cz{
-color: #4169E1;
+color: #0000CD;
 fond: bold;
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
 }
-miejsce>imie{}
+miejsce>imie{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+}
 
 /* Powtarzają się */
-PESEL:before{
-content:"PESEL: ";
+telefon{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+}
+adres{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
 }
 telefon:before{
 content:"tel.: ";
 }
 adres:before{
 content:"adres: ";
+}
+PESEL:before{
+content:"PESEL: ";
+}
+PESEL{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+}
+ulica:before{
+content:", ";
+}
+nr_mieszkania:before{
+content:"/ ";
 }
