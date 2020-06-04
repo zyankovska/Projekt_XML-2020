@@ -1,40 +1,329 @@
+biblioteka{
+background-color: #20B2AA;
+}
+
 /* Ksiazki */
-ksiazki{}
-dzial{}
-oddzial{}
-ksiazka{}
-tytul{}
-autor{}
-rok{}
-opis{}
+
+biblioteka:before{
+content: "Biblioteka";
+    display: block;
+    font-weight: bolder;
+    font-size: large;
+    text-transform: uppercase;
+    text-align: center;
+    background: white;
+    text-shadow: 2px 2px 5px;
+}
+
+ksiazki{
+	display: block;
+	background: #E6E6FA;
+	border: 1px solid black;
+	margin: 20px;
+    padding: 10px;
+}
+
+dzial[nazwa="nauka"]:before{
+content: "Nauka";
+font-size: large;
+}
+oddzial[nazwa="mfi"]>ksiazka:hover{
+background-color: #A52A2A;
+}
+oddzial[nazwa="jez"]>ksiazka:hover{
+background-color: #ff694d;
+}
+oddzial[nazwa="biohem"]>ksiazka:hover{
+background-color: #DC143C;
+}
+oddzial[nazwa="human"]>ksiazka:hover{
+background-color: #8B0000;
+}
+odd[kod="mfi"]:hover{
+background-color: #A52A2A;
+}
+odd[kod="jez"]:hover{
+background-color: #ff694d;
+}
+odd[kod="biochem"]:hover{
+background-color: #DC143C;
+}
+odd[kod="human"]:hover{
+background-color: #8B0000;
+}
+
+dzial[nazwa="rozrywka"]:before{
+content: "Rozrywka";
+font-size: large;
+}
+oddzial[nazwa="pp"]>ksiazka:hover{
+background-color: #ffff00;
+}
+oddzial[nazwa="po"]>ksiazka:hover{
+background-color: #B8860B;
+}
+oddzial[nazwa="dziec"]>ksiazka:hover{
+background-color: #FF8C00;
+}
+oddzial[nazwa="mlod"]>ksiazka:hover{
+background-color: #FFD700;
+}
+oddzial[nazwa="fant"]>ksiazka:hover{
+background-color: #FFA500;
+}
+oddzial[nazwa="krymsen"]>ksiazka:hover{
+background-color: #CD853F;
+}
+oddzial[nazwa="thm"]>ksiazka:hover{
+background-color: #F4A460;
+}
+odd[kod="pp"]:hover{
+background-color: #ffff00;
+}
+odd[kod="po"]:hover{
+background-color: #B8860B;
+}
+odd[kod="dziec"]:hover{
+background-color: #FF8C00;
+}
+odd[kod="mlod"]:hover{
+background-color: #FFD700;
+}
+odd[kod="fant"]:hover{
+background-color: #FFA500;
+}
+odd[kod="krymsen"]:hover{
+background-color: #CD853F;
+}
+odd[kod="thm"]:hover{
+background-color: #F4A460;
+}
+
+dzial[nazwa="archiwum"]:before{
+content: "Archiwum";
+font-size: large;
+}
+oddzial[nazwa="hist"]>ksiazka:hover{
+background-color: #9400D3;
+}
+odd[kod="hist"]:hover{
+background-color: #9400D3;
+}
+
+dzial[nazwa="periodyk"]:before{
+content: "Periodyk";
+font-size: large;
+}
+oddzial[nazwa="gaz"]>ksiazka:hover{
+background-color: #006400;
+}
+oddzial[nazwa="kat"]>ksiazka:hover{
+background-color: #228B22;
+}
+oddzial[nazwa="czp"]>ksiazka:hover{
+background-color: #008000;
+}
+odd[kod="gaz"]:hover{
+background-color: #006400;
+}
+odd[kod="kat"]:hover{
+background-color: #228B22;
+}
+odd[kod="czp"]:hover{
+background-color: #008000;
+}
+
+
+dzial{
+display: block;
+background: #ADD8E6;
+border: 1px solid black;
+margin: 20px;
+padding: 10px;
+}
+
+oddzial{
+background-color: #87CEFA;
+
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+
+display: block;
+width: 500px;
+float: center;
+margin: 2%;
+}
+
+odd{
+font-weight: bolder;
+font-size: large;
+
+position: relative;
+top: 0px; right: 0px;
+
+background-color: #cce7ff;
+
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+
+width: 250px;
+margin: 2%;
+}
+
+ksiazka{
+background-color: #cce7ff;
+
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+
+padding: 5px;
+margin: 5px;
+display: block;
+}
+
+tytul{
+color: #000080;
+font-weight: bold;
+}
+autor{
+text-shadow: 2px 2px 5px red;
+}
+rok:before{
+content:"rok: ";
+}
+opis{
+display: block;
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+text-align: center;
+}
+
 
 /* Pracownicy */
-pracownicy{}
-pracownik{}
-imie{}
-nazwisko{}
-PESEL{}
+
+pracownicy:before{
+content: "Pracownicy";
+font-size: large;
+}
+
+pracownicy{
+background-color: #7FFFD4;
+display: block;
+border: 1px solid black;
+margin: 20px;
+padding: 10px;
+}
+
+pracownik{
+background-color: ef88ef;
+
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+
+display: block;
+width: 450px;
+margin: 2%;
+}
+
+pracownik>imie{
+color: #008B8B;
+font-weight: bold;
+}
+pracownik>nazwisko{
+color: #008B8B;
+font-weight: bold;
+}
+pracownik>PESEL{
+text-decoration: underline;
+}
 posada{}
-telefon{}
-adres{}
-/* miasto{} ulica{} nr_domu{} nr_mieszkania{} */
+pracownik>telefon{}
+pracownik>adres{}
 
 /* Czytelnicy */
-czytelnicy{}
-czytelnik{}
-imie{}
-nazwisko{}
-PESEL{}
-posada{}
-telefon{}
+
+czytelnicy:before{
+content: "Czytelnicy";
+font-size: large;
+}
+
+czytelnicy{
+background-color: #E0FFFF;
+display: block;
+border: 1px solid black;
+margin: 20px;
+padding: 10px;
+}
+
+czytelnik{
+background-color: #00BFFF;
+
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+
+display: block;
+width: 450px;
+margin: 2%;
+}
+czytelnik>imie{
+color: #191970;
+font-weight: bold;
+}
+czytelnik>nazwisko{
+color: #191970;
+font-weight: bold;
+}
+czytelnik>PESEL{}
+czytelnikt>elefon{}
 email{}
 punkty{}
-adres{}
-/* miasto{} ulica{} nr_domu{} nr_mieszkania{} */
+czytelnik>adres{}
 
 /* Rezerwacja */
-rezerwacja{}
-kolejka{}
+
+rezerwacja:before{
+content: "Rezerwacja";
+font-size: large;
+}
+
+rezerwacja{
+background-color: #00BFFF;
+display: block;
+border: 1px solid black;
+margin: 20px;
+padding: 10px;
+}
+kolejka{
+background-color: #6495ED;
+
+border-width: thin;
+border-style: solid;
+border-color: #000000;
+
+display: block;
+width: 450px;
+margin: 2%;
+}
 miejsce{}
-id_cz{}
-imie{}
+id_cz{
+color: #4169E1;
+fond: bold;
+}
+miejsce>imie{}
+
+/* Powtarzają się */
+PESEL:before{
+content:"PESEL: ";
+}
+telefon:before{
+content:"tel.: ";
+}
+adres:before{
+content:"adres: ";
+}
