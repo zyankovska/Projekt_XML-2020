@@ -8,12 +8,18 @@
 
         </xsl:text>
         <html>
+            <head>
+                <link rel="stylesheet" type="text/css" href="biblioteka_html.css" media="screen" />
+
+            </head>
             <body>
                 <h1>Biblioteka</h1>
                 <div class="czytelnicy">
                     <h2>Czytelnicy</h2>
                     <xsl:apply-templates select="czytelnicy"/>
-                    <h3>Kolejka rezerwacji</h3>
+                </div>
+                <div class="kolejka">
+                    <h2>Kolejka rezerwacji</h2>
                     <xsl:apply-templates select="rezerwacja/kolejka"/>
                 </div>
             </body>
@@ -23,13 +29,13 @@
     <xsl:template name="czytelnicy" match="czytelnicy">
         <xsl:for-each select="czytelnik">
             <li>
-            <xsl:value-of select="@id" />
-                <xsl:text> </xsl:text>
+                <b><xsl:value-of select="@id" />
+                <xsl:text>: </xsl:text></b>
             <xsl:value-of select="imie"/>
                 <xsl:text> </xsl:text>
             <xsl:value-of select="nazwisko"/>
-                <xsl:text> </xsl:text>
-            <xsl:value-of select="status"/>
+                <xsl:text> - </xsl:text>
+            "<i><xsl:value-of select="@status"/>"</i>
             </li>
         </xsl:for-each>
     </xsl:template>
