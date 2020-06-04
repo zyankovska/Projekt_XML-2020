@@ -49,6 +49,7 @@
                 </tr>
                 <xsl:for-each select="miejsce">
                     <xsl:call-template name="miejsce"/>
+                    <br />
             </xsl:for-each>
             </table>
     </xsl:template>
